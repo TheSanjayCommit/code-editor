@@ -1,0 +1,6 @@
+node_modules
+.env
+dist
+workspace
+.DS_Store
+coverage
