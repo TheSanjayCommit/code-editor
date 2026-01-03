@@ -1,7 +1,7 @@
 import React, { useRef } from 'react';
 import { RefreshCw, ExternalLink } from 'lucide-react';
 
-const PREVIEW_URL = "http://localhost:3000/preview";
+const PREVIEW_URL = import.meta.env.PROD ? "/preview" : "http://localhost:3000/preview";
 
 export default function PreviewPanel() {
     const iframeRef = useRef(null);

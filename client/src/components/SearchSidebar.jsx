@@ -3,7 +3,8 @@ import axios from 'axios';
 import { Search, ChevronRight, ChevronDown, FileCode } from 'lucide-react';
 
 // API URL (match App.jsx)
-const API_BASE = "http://localhost:3000";
+// API URL (match App.jsx)
+const API_BASE = import.meta.env.PROD ? "" : "http://localhost:3000";
 
 export default function SearchSidebar({ onFileSelect }) {
     const [query, setQuery] = useState('');

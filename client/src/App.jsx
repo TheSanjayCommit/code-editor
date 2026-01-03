@@ -8,7 +8,8 @@ import PromptBar from './components/PromptBar';
 import PreviewPanel from './components/PreviewPanel';
 
 // API URL (change port if backend differs)
-const API_BASE = "http://localhost:3000";
+// API URL (change port if backend differs)
+const API_BASE = import.meta.env.PROD ? "" : "http://localhost:3000";
 
 export default function App() {
   const [project, setProject] = useState({ files: [] });
